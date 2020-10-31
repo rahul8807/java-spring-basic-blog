@@ -17,7 +17,7 @@ public class BlogController {
         this.postRepository = postRepository;
     }
 
-    @RequestMapping
+    @RequestMapping("/")
     public String listPosts(ModelMap modelMap){
         List<Post> postList = postRepository.getAllPosts();
         modelMap.put("posts",postList);
